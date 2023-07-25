@@ -19,7 +19,7 @@ RUN python /data/download_model.py && \
 
 
 ENV PYTHONPATH=/data/exllama
-ENV MODEL_REPO=""
+ENV MODEL_REPO="TheBloke/Wizard-Vicuna-30B-Uncensored-GPTQ"
 ENV PROMPT_PREFIX=""
 ENV PROMPT_SUFFIX=""
 ENV HUGGINGFACE_HUB_CACHE="/runpod-volume/huggingface-cache/hub"
