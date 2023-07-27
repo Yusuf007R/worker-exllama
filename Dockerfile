@@ -10,9 +10,6 @@ RUN pip install --upgrade pip && \
 RUN git clone https://github.com/turboderp/exllama
 RUN pip install -r exllama/requirements.txt
 
-COPY handler.py /data/handler.py
-COPY __init.py__ /data/__init__.py
-
 ENV PYTHONPATH=/data/exllama
 ENV MODEL_REPO="TheBloke/Wizard-Vicuna-30B-Uncensored-GPTQ"
 ENV PROMPT_PREFIX=""
@@ -24,6 +21,8 @@ COPY download_model.py /data/download_model.py
 RUN python /data/download_model.py && \
     rm /data/download_model.py
 
+COPY handler.py /data/handler.py
+COPY __init.py__ /data/__init__.py
 
 
 
